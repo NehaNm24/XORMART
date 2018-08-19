@@ -1,0 +1,487 @@
+<!Doctype html>
+<html>
+<head>
+ <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<link href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
+<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+
+</head>
+<style>
+html, body{height: 100%;
+   
+    background-attachment: fixed;}
+.wrapper {
+    width: 100%;
+    float: left; 
+    background: url(../../assets/bg.jpg) no-repeat left center;
+    
+    height: 100%;
+}
+.sidebar-hotel {
+    width: 20%;
+    height: 100%;
+    float: left;
+    background: #313539;
+	position:fixed;
+	top:0px;
+	left:0px;
+}
+.content-hotel{width:80%;padding:0px; margin-left: 20%;color:#4c3a1b;}
+.side-in {
+    width: 100%;
+    float: left;
+    text-align: center;
+    padding: 25px 0;
+}
+.side-in .logo{margin:50px 0}
+.side-menu{
+    width: 100%;
+    float: left;
+    margin: 15px 0;
+}
+.side-menu ul{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+.side-menu ul li{
+ 
+    display: block;
+}
+.side-menu ul li a{
+    padding: 10px 0;
+    display: block;
+    border-bottom: 1px solid #96745e;
+    text-decoration: none;
+    font-size: 21px;
+    color: #ccc;
+	position:relative;
+	    transition: all .5s ease;
+	    -webkit-transition: all .5s ease;
+	    -moz-transition: all .5s ease;
+
+}
+
+.side-menu ul li:first-child a{ border-top: 1px solid #96745e;}
+.side-menu ul li a:after{position:absolute;right:0px;width:2px;height:100%; background:#fff;content:"";top:0px;display:none; transition: all .5s ease;
+	    -webkit-transition: all .5s ease;
+	    -moz-transition: all .5s ease;}
+.side-menu ul li a:hover{color:#fff;}
+.side-menu ul li a:hover:after{display:block;}
+.social-icon{width:100%;float:left;margin-top:15px;}
+.social-icon a{margin:5px;}
+.content-hotel h1{margin:0px;padding:0px 20px;font:400 50px/60px "Arial"; text-transform:uppercase;color:#4c3a1b;text-align:center;padding:50px 0 0 0}
+.content-hotel img{max-width:100%;}
+.content-hotel h2{margin:0px;padding:0px 20px;font:400 30px/40px "Arial"; text-transform:capitalize;color:#4c3a1b;text-align:center;}
+.post-list{width:100%; float:left;margin-top:200px; background:#fff;padding:0px 0px;}
+.left-right{width:100%;float:left;background: #313539;}
+.left-right:nth-child(even) .left{float:right;}
+.left-right .left{width:50%; float:left;}
+.left-right .right{width:50%;float:left;padding:3%;color:#000;background: #313539;color: #fff;}
+/*
+Code snippet by maridlcrmn for Bootsnipp.com
+Follow me on Twitter @maridlcrmn
+*/
+
+.navbar-brand { position: relative; z-index: 2; }
+
+.navbar-nav.navbar-right .btn { position: relative; z-index: 2; padding: 4px 20px; margin: 10px auto; transition: transform 0.3s; }
+
+.navbar .navbar-collapse { position: relative; overflow: hidden !important; }
+.navbar .navbar-collapse .navbar-right > li:last-child { padding-left: 22px; }
+
+.navbar .nav-collapse { position: absolute; z-index: 1; top: 0; left: 0; right: 0; bottom: 0; margin: 0; padding-right: 120px; padding-left: 80px; width: 100%; }
+.navbar.navbar-default .nav-collapse { background: #313539; }
+.navbar.navbar-inverse .nav-collapse { background: #313539; }
+.navbar .nav-collapse .navbar-form { border-width: 0; box-shadow: none; }
+.nav-collapse>li { float: right; }
+
+.btn.btn-circle { border-radius: 50px; }
+.btn.btn-outline { background-color: transparent; }
+
+.navbar-nav.navbar-right .btn:not(.collapsed) {
+    background: #313539;
+    border-color: rgb(111, 84, 153);
+    color: rgb(0, 0, 0);
+}
+
+.navbar.navbar-default .nav-collapse,
+.navbar.navbar-inverse .nav-collapse {
+    height: auto !important;
+    transition: transform 0.3s;
+    transform: translate(0px,-50px);
+}
+.navbar.navbar-default .nav-collapse.in,
+.navbar.navbar-inverse .nav-collapse.in {
+    transform: translate(0px,0px);
+}
+
+
+@media screen and (max-width: 767px) {
+    .navbar .navbar-collapse .navbar-right > li:last-child { padding-left: 15px; padding-right: 15px; } 
+    
+    .navbar .nav-collapse { margin: 7.5px auto; padding: 0; }
+    .navbar .nav-collapse .navbar-form { margin: 0; }
+    .nav-collapse>li { float: none; }
+    
+    .navbar.navbar-default .nav-collapse,
+    .navbar.navbar-inverse .nav-collapse {
+        transform: translate(-100%,0px);
+    }
+    .navbar.navbar-default .nav-collapse.in,
+    .navbar.navbar-inverse .nav-collapse.in {
+        transform: translate(0px,0px);
+    }
+    
+    .navbar.navbar-default .nav-collapse.slide-down,
+    .navbar.navbar-inverse .nav-collapse.slide-down {
+        transform: translate(0px,-100%);
+    }
+    .navbar.navbar-default .nav-collapse.in.slide-down,
+    .navbar.navbar-inverse .nav-collapse.in.slide-down {
+        transform: translate(0px,0px);
+    }
+}
+
+.menu_block {
+	height: 31px;
+	position: relative;
+	overflow: hidden;
+	padding-left: 67px;
+}
+
+nav.bt-menu  ul li {
+	font: bold 18px/29px 'Open Sans', sans-serif;
+	color: #fff;
+}
+nav.bt-menu  ul li:first-child+li+li {
+	margin-right: 120px;
+}
+
+.bt-overlay {
+	display: none;
+}
+
+nav.bt-menu  ul li a:hover, nav ul li.current  {
+	color: #5f5e4e;
+}
+
+.container {
+	padding: 80px;
+}
+
+.bt-menu {
+	position: relative;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 0;
+	border-width: 0px;
+	border-style: solid;
+	border-color: #333;
+	background-color: rgba(0,0,0,0);
+	-webkit-backface-visibility: hidden;
+	-webkit-transition: border-width 0.3s, background-color 0.3s, height 0s 0.3s;
+	transition: border-width 0.3s, background-color 0.3s, height 0s 0.3s;
+}
+
+.bt-menu.bt-menu-open {
+	height: 100%;
+	-webkit-transition: border-width 0.3s, background-color 0.3s;
+	transition: border-width 0.3s, background-color 0.3s;
+}
+
+.bt-overlay {
+	position: absolute;
+	width: 100%;
+}
+
+.bt-menu-open .bt-overlay {
+	height: 100%;
+}
+
+.bt-menu-trigger {
+	position: absolute;
+	top: 0;
+	left: 50%;
+	z-index: 100;
+	display: block;
+	margin-left: -60px;
+	width: 54px;
+	height: 31px;
+	cursor: pointer;
+}
+
+.bt-menu-trigger span {
+	position: absolute;
+	top: 50%;
+	left: 0;
+	display: block;
+	width: 100%;
+	height: 4px;
+	margin-top: -2px;
+	background-color: #fff;
+	font-size: 0px;
+	transition: 0.5s ease;
+	-o-transition: 0.5s ease;
+	-webkit-transition: 0.5s ease;
+	-webkit-touch-callout: none;
+	-webkit-user-select: none;
+	-khtml-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+}
+
+.bt-menu-open .bt-menu-trigger span {
+	height: 7px;
+	margin-top: -4px;
+}
+
+.bt-menu-trigger span:before,
+.bt-menu-trigger span:after {
+	position: absolute;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: #fff;
+	content: '';
+	transition: 0.5s ease;
+	-o-transition: 0.5s ease;
+	-webkit-transition: 0.5s ease;
+}
+
+.bt-menu-trigger span:before {
+	-webkit-transform: translateY(-175%);
+	transform: translateY(-175%);
+}
+
+.bt-menu-trigger span:after {
+	-webkit-transform: translateY(175%);
+	transform: translateY(175%);
+}
+
+.bt-menu-open .bt-menu-trigger span:before,
+.bt-menu-open .bt-menu-trigger span:after {
+}
+
+
+.bt-menu.bt-menu-open ul li:first-child,
+.bt-menu.bt-menu-open ul li:last-child {
+	-webkit-transition-delay: 0.2s;
+	transition-delay: 0.2s;
+}
+
+.bt-menu.bt-menu-open ul li:nth-child(2),
+.bt-menu.bt-menu-open ul li:nth-last-child(2) {
+	-webkit-transition-delay: 0.15s;
+	transition-delay: 0.15s;
+}
+
+.bt-menu.bt-menu-open ul li:nth-child(3),
+.bt-menu.bt-menu-open ul li:nth-last-child(3) {
+	-webkit-transition-delay: 0.1s;
+	transition-delay: 0.1s;
+}
+
+
+.bt-menu-open .bt-menu-trigger span:before {
+	-webkit-transform: translateY(-175%);
+	transform: translateY(-175%);
+	height: 7px;
+}
+
+.bt-menu-open .bt-menu-trigger span:after {
+	-webkit-transform: translateY(175%);
+	transform: translateY(175%);
+	height: 7px;
+}
+
+.bt-menu ul {
+	position: absolute;
+	bottom: 0px;
+	left: 0;
+	margin: 0;
+	padding: 0;
+	width: 100%;
+	list-style: none;
+	text-align: center;
+	white-space: nowrap;
+	height: 0;
+	-webkit-transition: height 0s 0.3s;
+	transition: height 0s 0.3s;
+}
+
+.bt-menu.bt-menu-open ul {
+	height: 31px;
+	-webkit-transition: none;
+	transition: none;
+}
+
+.bt-menu ul li,
+.bt-menu ul li a {
+	text-align: center;
+}
+
+.bt-menu ul li {
+	display: inline-block;
+	margin: 0 21px;
+	opacity: 0;
+	-webkit-transition: -webkit-transform 0.3s, opacity 0.3s;
+	transition: transform 0.3s, opacity 0.3s;
+	-webkit-transform: translate3d(0,100%,0);
+	transform: translate3d(0,100%,0);
+}
+
+.bt-menu.bt-menu-open ul li {
+	opacity: 1;
+	-webkit-transform: translate3d(0,0,0);
+	transform: translate3d(0,0,0);
+}
+
+
+.bt-menu ul li a {
+	display: block;
+	outline: none;
+	text-decoration: none;
+	-webkit-transition: color 0.2s;
+	transition: color 0.2s;
+}
+
+.bt-menu ul li a:before {
+	display: none;
+}
+
+
+</style>
+<body>
+<nav class="navbar navbar-inverse">
+      <div class="container">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse-4">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+         
+        </div>
+	
+    
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="navbar-collapse-4">
+          <ul class="nav navbar-nav navbar-right">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Services</a></li>
+            <li><a href="#">Works</a></li>
+            <li><a href="#">News</a></li>
+            <li><a href="#">Contact</a></li>
+            <li>
+              <a class="btn btn-default btn-outline btn-circle collapsed"  data-toggle="collapse" href="#nav-collapse4" aria-expanded="false" aria-controls="nav-collapse4">Profile <i class=""></i> </a>
+            </li>
+          </ul>
+		</div>
+</nav>
+  <div class="wrapper">
+		<div class="sidebar-hotel">
+		<div class="side-in">
+		
+		<div class="side-menu">
+			<ul>
+				
+                <li><a href="#">Oil & Masala</a></li>
+                <li><a href="#">Fruits</a></li>
+				<li><a href="#">Vegetables</a></li>
+				
+				<li><a href="#">Bakery,Cakes & Dairy</a></li>
+				<li><a href="#">Foodgrains</a></li>
+				
+			</ul>
+		</div>
+		
+		</div>
+		</div>
+		<div class="content-hotel">
+            
+            <img src="logo3.jpg">       
+			<!--<h2>Grocery stores also offer non-perishable foods that are packaged in bottles, boxes, and cans; some also have bakeries, butchers, delis, and fresh produce.</h2>-->
+			
+			
+
+		</div>
+		
+		<div class="content"><div class="ic"></div>
+  <div class="container_12">
+    <div class="grid_12">
+      <h3 class="head2">XOR-MART</h3>
+    </div>  
+    
+    <div class="tabs tb gallery">
+             <div class="div-nav  ">
+             <div class="grid_12">
+                 <ul class="nav">
+                    <li class="selected"><a href="#tab-1" class="">Vegetables</a></li>
+                    <li><a href="#tab-2">Fruits</a></li>
+                    <li><a href="#tab-3">Masala</a></li>
+                    <li><a href="#tab-4">Bakery</a></li>
+                    <li><a href="#tab-5">Foodgrains</a></li>
+                    <li><a href="#tab-6">Ready To Cook</a></li>
+                 </ul>
+             </div>    
+             </div>
+             <div class="div-tabs">
+              <div  id="tab-1" class="tab-content gallery1">
+                  <div class="grid_3">
+                    <a href="images/big1.jpg" class="gal"><img src="assets/veges/potato.jpg" alt=""><span></span></a>
+                    <div class="col2"><span class="col3"><a href="#">Potato</a> ₹ 70</span> </div>
+                  </div>
+                  <div class="grid_3">
+                    <a href="images/big2.jpg" class="gal"><img src="assets/veges/onion.jpg" alt=""><span></span></a>
+                    <div class="col2"><span class="col3"><a href="#">Onion</a></span> ₹ 23</div>
+                  </div>
+                  <div class="grid_3">
+                    <a href="images/big3.jpg" class="gal"><img src="assets/veges/tomato.jpg" alt=""><span></span></a>
+                    <div class="col2"><span class="col3"><a href="#">Tomato</a></span> ₹ 10</div>
+                  </div>
+                  <div class="grid_3">
+                    <a href="images/big4.jpg" class="gal"><img src="assets/veges/capsicum.jpg" alt=""><span></span></a>
+                    <div class="col2"><span class="col3"><a href="#">Capsicum</a></span> ₹ 50</div>
+                  </div>
+                  <div class="grid_3">
+                    <a href="images/big5.jpg" class="gal"><img src="assets/veges/carrot.jpg" alt=""><span></span></a>
+                    <div class="col2"><span class="col3"><a href="#">Carrot</a></span> ₹ 69</div>
+                  </div>
+                  <div class="grid_3">
+                    <a href="images/big6.jpg" class="gal"><img src="assets/veges/couliflower.jpg" alt=""><span></span></a>
+                    <div class="col2"><span class="col3"><a href="#">Cauliflower </a></span> ₹ 79</div>
+                  </div>
+              </div>
+              
+              
+              
+              
+             
+             </div>
+        </div>
+  </div>
+</div>
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+	</div>
+	<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+</body>
+</html>
